@@ -1,6 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import React, { useState } from "react";
 
@@ -25,7 +24,7 @@ function App() {
     { variable: "Temperature", data: `${temp}°C` },
     { variable: "Humidity", data: `${humid}%` },
     { variable: "Description", data: `${description}` },
-    { variable: "Wind-speed", data: `${wind}mph` }
+    { variable: "Wind-speed", data: `${wind}mph` },
   ];
 
   function getweatherData(event) {
@@ -53,11 +52,12 @@ function App() {
               {value.variable}: {value.data}{" "}
             </li>
           );
+        } else {
+          return null;
         }
       })}
     </div>
   );
 }
-
 
 export default App;
